@@ -1,0 +1,9 @@
+.person-details{
+    flex-direction: row;
+    padding: 15px;
+}
+
+.person-image{
+    max-height: 200px;
+    border-radius: 5px;
+}
