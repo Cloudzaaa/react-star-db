@@ -66,17 +66,17 @@ const PersonView = ({person}) => {
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
             <span className="term">Gender</span>
-            <span className="term">{gender}</span>
+            <span className="term"> {gender}</span>
           </li>
 
           <li className="list-group-item">
             <span className="term">Birth year</span>
-            <span className="term">{birthYear}</span>
+            <span className="term"> {birthYear}</span>
           </li>
 
           <li className="list-group-item">
             <span className="term">Eye color</span>
-            <span className="term">{eyeColor}</span>
+            <span className="term"> {eyeColor}</span>
           </li>
         </ul>
       </div>

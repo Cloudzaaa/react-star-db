@@ -1,0 +1,9 @@
+.planet-details{
+    flex-direction: row;
+    padding: 15px;
+}
+
+.planet-image{
+    max-height: 200px;
+    border-radius: 5px;
+}

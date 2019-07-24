@@ -4,31 +4,24 @@ import ItemList from '../item-list';
 import PersonDetails from '../person-details';
 import './app.css';
 import PeoplePage from '../people-page';
+import PlanetPage from '../planet-page';
+import Row from '../row';
+import SwapiService from '../../services';
 
 export default class App extends Component {
-
-  state = {
-    showRandomPlanet: true,
-  };
-
-  toggleRandomPlanet = () => {
-
-  };
 
   render() {
     return (
       <div className="app">
         <div className="row">
           <div className="col-md-12">
-            <RandomPlanet/>
+            <RandomPlanet />
           </div>
         </div>
 
         <PeoplePage />
+        <PlanetPage />
 
-        <PeoplePage />
-
-        <PeoplePage />
       </div>
     );
   }

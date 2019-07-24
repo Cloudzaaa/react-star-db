@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import ItemList from '../item-list';
-import PersonDetails from '../person-details';
+import PlanetDetails from '../planet-details';
 import ErrorIndicator from '../error-indicator';
-import './people-page.css';
+import './planet-page.css';
 import SwapiService from '../../services';
 
 class ErrorBoundry extends Component {
@@ -22,17 +22,17 @@ class ErrorBoundry extends Component {
   }
 }
 
-export default class PeoplePage extends Component {
+export default class PlanetPage extends Component {
 
   swapiService = new SwapiService();
 
   state = {
-    selectedPerson: null,
+    selectedPlanet: null,
   };
 
-  onPersonSelected = (id) => {
+  onPlanetSelected = (id) => {
     this.setState({
-      selectedPerson: id,
+      selectedPlanet: id,
     });
   };
 
@@ -42,13 +42,13 @@ export default class PeoplePage extends Component {
     }
     const itemList = (
       <ItemList
-        onItemSelected={this.onPersonSelected}
-        getData={this.swapiService.getAllPeople}
+        onItemSelected={this.onPlanetSelected}
+        getData={this.swapiService.getAllPlanets}
       >
-        {(i) => `${i.name} (${i.gender}, ${i.birthYear})`}
+        {(i) => `${i.name}`}
       </ItemList>
     );
-    const personDetail = (<PersonDetails personId={this.state.selectedPerson}/>);
+    const planetDetail = (<PlanetDetails planetId={this.state.selectedPlanet}/>);
 
     return (
       <div className="people-page">
@@ -58,7 +58,7 @@ export default class PeoplePage extends Component {
           </div>
 
           <div className="col-md-6">
-            {personDetail}
+            {planetDetail}
           </div>
         </div>
       </div>
